@@ -1,0 +1,39 @@
+{
+  "name": "emp-plus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/efoxTeam/emp-plus",
+  "author": "ckken <ckken@qq.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.18.3",
+    "typescript": "^4.2.4",
+    "husky": "4.3.8",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@efox/emp-tsconfig": "^1.1.3",
+    "@efox/eslint-config-react-prittier-ts": "^1.2.5"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/**",
+      "projects/*"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "@efox/eslint-config-react-prittier-ts"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
