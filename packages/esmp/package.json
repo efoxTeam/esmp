@@ -1,0 +1,17 @@
+{
+  "name": "@efox/esmp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "esmp": "./bin/esmp.js"
+  },
+  "devDependencies": {
+    "commander": "^7.2.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "esbuild": "^0.11.11",
+    "fs-extra": "^9.1.0"
+  }
+}

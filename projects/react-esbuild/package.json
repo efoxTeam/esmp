@@ -1,0 +1,14 @@
+{
+  "name": "react-esbuild",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": "true",
+  "dependencies": {
+    "@efox/esmp": "^1.0.0"
+  },
+  "scripts": {
+    "dev":"esmp dev --src src/index.ts",
+    "esmp":"esmp"
+  }
+}
