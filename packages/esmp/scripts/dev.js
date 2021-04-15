@@ -28,7 +28,7 @@ module.exports = async ({src}) => {
   // })
   ///////////////////
   const port = 8000
-  const isServer = true
+  const isServer = false
   if (isServer) {
     async function serve() {
       console.log(`running server from: http://localhost:${port}/`)
