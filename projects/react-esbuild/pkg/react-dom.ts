@@ -1,1 +1,1 @@
-export * from 'https://esm.sh/react-dom'
+export * as default from 'https://esm.sh/react-dom'

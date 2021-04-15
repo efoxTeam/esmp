@@ -1,5 +1,5 @@
-import React from 'https://esm.sh/react'
-import confetti from 'https://cdn.skypack.dev/canvas-confetti'
+import React from 'react'
+import confetti from 'canvas-confetti'
 import './app.scss'
 import d from './app.json'
 console.log(d)
