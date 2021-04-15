@@ -11,13 +11,19 @@ program
   .option('-pc, --public <public>', '目标 默认为 public/')
   .option('-e, --env <env>', '部署环境 dev、test、prod 默认为 dev')
   .option('-h, --hot', '是否使用热更新 默认不启动')
-  .option('-o, --open <open>', '是否打开调试页面 默认true,false禁止自动打开')
-  .option('-t, --ts', '生成类型文件 默认为 false')
-  .option('-ps, --progress', '显示进度 默认为 true')
-  .option('-wl, --wplogger [filename]', '打印webpack配置 默认为 false,filename 为 输出webpack配置文件')
-  .option('-rm, --remote', '在执行命令时拉取远程声明文件，远程地址首选package.json里的remoteBaseUrlList')
-  .action((d) => {
+  .action(d => {
     require('../scripts/dev')(d)
   })
 
-  program.parse(process.argv)
+//
+program
+  .command('build')
+  .description('构建项目')
+  .option('-s, --src <src>', '目标文件 默认为 src/index.ts')
+  .option('-d, --dist <dist>', '目标 默认为 dist/')
+  .option('-e, --env <env>', '部署环境 dev、test、prod 默认为 prod')
+  .action(d => {
+    require('../scripts/build')(d)
+  })
+
+program.parse(process.argv)

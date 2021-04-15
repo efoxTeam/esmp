@@ -8,7 +8,8 @@
     "@efox/esmp": "^1.0.0"
   },
   "scripts": {
-    "dev":"esmp dev --src src/index.ts",
+    "dev":"esmp dev",
+    "build":"esmp build",
     "esmp":"esmp"
   }
 }
