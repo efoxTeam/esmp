@@ -7,12 +7,13 @@ import esbuild from 'esbuild'
 import sassPlugin from 'esbuild-plugin-sass'
 import svgrPlugin from 'esbuild-plugin-svgr'
 import lessPlugin from 'esbuild-plugin-less'
-module.exports = async ({src}:any) => {
+import glob from 'tiny-glob'
+export default async function({src}:any) {
   src = src || 'src/index.ts'
-  src = path.join(cwdroot, src)
+  // const entryPoints = await glob(path.join(cwdroot,src,'**/**.*'));
+  // console.log('entryPoints',entryPoints)
   const outputPath = path.join(cliPath, 'template', 'public')
   const port = 8000
-  console.log('outputPath',outputPath)
   esbuild
       .serve(
         {

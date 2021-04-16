@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "compile":"lerna run --parallel compile --scope @efox/*",
+    "compile:watch":"lerna run --parallel compile:watch --scope @efox/*",
     "example":"lerna run build --scope=react-esbuild"
   },
   "devDependencies": {

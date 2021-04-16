@@ -9,3 +9,4 @@ emp on esm [demo](https://esmp.vercel.app/)
 + css module [about](https://github.com/evanw/esbuild/issues/20)
 + hmr `doing`
 + svg 
++ split & tree sharking

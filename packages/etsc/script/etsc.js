@@ -3,7 +3,7 @@ const fs = require('fs-extra')
 const path = require('path')
 const rimraf = require('rimraf')
 const cwdroot = process.cwd()
-const glob = require("tiny-glob");
+const glob = require("tiny-glob")
 module.exports = async ({ src, watch, out }) => {
   src = src || 'src'
   out = out || 'dist'

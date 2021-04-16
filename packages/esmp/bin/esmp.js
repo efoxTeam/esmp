@@ -10,7 +10,7 @@ program
   .option('-e, --env <env>', '部署环境 dev、test、prod 默认为 dev')
   .option('-h, --hot', '是否使用热更新 默认不启动')
   .action(d => {
-    require('../dist/scripts/dev')(d)
+    require('../dist/scripts/dev').default(d)
   })
 
 //
@@ -21,7 +21,7 @@ program
   .option('-d, --dist <dist>', '目标 默认为 dist/')
   .option('-e, --env <env>', '部署环境 dev、test、prod 默认为 prod')
   .action(d => {
-    require('../dist/scripts/build')(d)
+    require('../dist/scripts/build').default(d)
   })
 
 program.parse(process.argv)
