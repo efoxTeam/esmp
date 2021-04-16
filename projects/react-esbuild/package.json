@@ -10,7 +10,6 @@
   "scripts": {
     "dev":"esmp dev",
     "build":"esmp build",
-    "esmp":"esmp",
-    "deploy":"lerna add @efox/esmp --scope=react-esbuild"
+    "esmp":"esmp"
   }
 }

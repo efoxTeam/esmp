@@ -6,6 +6,10 @@
   "author": "ckken <ckken@qq.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "compile":"lerna run --parallel compile --scope @efox/*",
+    "example":"lerna run build --scope=react-esbuild"
+  },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
