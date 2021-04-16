@@ -1,0 +1,24 @@
+{
+  "name": "@efox/etsc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "etsc": "./bin/etsc.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efoxTeam/esmp.git",
+    "directory": "packages/etsc"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "commander": "^7.2.0",
+    "esbuild": "^0.11.11"
+  }
+}

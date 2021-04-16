@@ -9,7 +9,8 @@ export default function App() {
   return (
     <div className="app">
       <h1>Hello ESMP</h1>
-      <p>use esm instead module federation</p>
+      <p>use esm instead module federation!</p>
+      <p>esmp change to ts</p>
     </div>
   )
 }

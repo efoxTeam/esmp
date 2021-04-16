@@ -1,7 +1,7 @@
-const path = require('path')
-const fs = require('fs-extra')
-function copyPublicFolder({public, dist, template, favicon}) {
-  if (!fs.existsSync(public)) {
+import path from 'path'
+import fs from 'fs-extra'
+function copyPublicFolder({out, dist, template, favicon}:any) {
+  if (!fs.existsSync(out)) {
     // console.warn('public not exist!')
     return
   }
@@ -10,7 +10,7 @@ function copyPublicFolder({public, dist, template, favicon}) {
     return
   }
   const filters = [template, favicon]
-  fs.copySync(public, dist)
+  fs.copySync(out, dist)
   //   fs.copySync(public, dist, {
   //     dereference: true,
   //     // filter: file => filters.indexOf(file) === -1,
@@ -21,4 +21,4 @@ function copyPublicFolder({public, dist, template, favicon}) {
   //   })
 }
 
-module.exports = {copyPublicFolder}
+export {copyPublicFolder}

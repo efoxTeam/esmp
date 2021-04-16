@@ -1,9 +1,7 @@
 #!/usr/bin/env node
-
-const program = require('commander') // 命令行工具
-const package = require('../package.json')
-// const chalk = require('chalk') // 支持修改控制台中字符串的样式 字体样式、字体颜色、背景颜色
-program.version(package.version, '-v, --version').usage('<command> [options]')
+import program from 'commander' // 命令行工具
+import pkg from '../../package.json'
+program.version(pkg.version, '-v, --version').usage('<command> [options]')
 program
   .command('dev')
   .description('调试项目')
