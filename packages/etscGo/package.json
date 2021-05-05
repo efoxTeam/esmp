@@ -1,10 +1,14 @@
 {
-  "name": "etsc",
-  "version": "0.1",
+  "name": "@efox/etsc-go",
+  "author": "flyyuan <740004544@qq.com>",
+  "version": "0.1.0",
   "description": "An extremely fast JavaScript bundler and minifier.",
   "repository": "git+https://github.com/efoxTeam/esmp.git",
   "bin": {
-    "etscGo": "bin/etsc"
+    "etsc-go": "./bin/etsc"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "license": "MIT"
 }

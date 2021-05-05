@@ -23,6 +23,7 @@ importers:
       '@efox/emp-tsconfig': ^1.1.3
       '@efox/eslint-config-react-prittier-ts': ^1.2.5
       '@efox/etsc': ^1.0.0
+      '@efox/etsc-go': ^0.1.0
       '@types/fs-extra': ^9.0.11
       '@types/rimraf': ^3.0.0
       chalk: ^4.1.0
@@ -39,6 +40,7 @@ importers:
     dependencies:
       '@efox/emp-tsconfig': 1.1.3_typescript@4.2.4
       '@efox/etsc': link:../etsc
+      '@efox/etsc-go': link:../etscGo
       chalk: 4.1.1
       commander: 7.2.0
       esbuild: 0.11.14
@@ -62,6 +64,9 @@ importers:
     dependencies:
       commander: 7.2.0
       esbuild: 0.11.14
+
+  packages/etscGo:
+    specifiers: {}
 
   projects/react-esbuild:
     specifiers:

@@ -8,7 +8,7 @@
     "@efox/esmp": "^1.0.0"
   },
   "scripts": {
-    "dev": "esmp dev",
+    "dev": "node ./dist/bin/esmp.js dev",
     "build": "esmp build",
     "esmp": "esmp"
   }

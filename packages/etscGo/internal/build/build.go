@@ -34,10 +34,6 @@ func GetAllFile(pathname string) ([]string, error) {
 }
 
 func Dev(src,out string, watch bool)  {
-	fmt.Println("input", src)
-	fmt.Println("output", out)
-	fmt.Println("watch",watch)
-
 	cwdroot, _ := os.Getwd()
 	entryFiles := path.Join(cwdroot,src)
 	outputPath := path.Join(cwdroot,out)
@@ -59,16 +55,27 @@ func Dev(src,out string, watch bool)  {
 		isWatch = nil
 	}
 
-	api.Build(api.BuildOptions{
+	result := api.Build(api.BuildOptions{
 		EntryPoints: entryPoints,
+		Outdir:  outputPath,
+		Format: api.FormatCommonJS,
+		Platform: api.PlatformNode,
+		Watch:  isWatch,  
 		Bundle: true,
+		Tsconfig:tsconfigPath,
 		Loader: map[string]api.Loader{
 			".js": api.LoaderJSX,
+			".node": api.LoaderFile,
 		},
-		Platform: api.PlatformNode,
 		Write:    true,
-		Watch:  isWatch,  
-		Tsconfig:tsconfigPath,
-		Outdir:  outputPath,
 	})
+
+	if len(result.Errors) > 0 {
+    fmt.Println(result.Errors)
+  }
+
+	if(watch){
+		// 如果是 watch 模式，需要常驻进程
+		select{}
+	}
 }
