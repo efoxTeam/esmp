@@ -1,0 +1,10 @@
+{
+  "name": "etsc",
+  "version": "0.1",
+  "description": "An extremely fast JavaScript bundler and minifier.",
+  "repository": "git+https://github.com/efoxTeam/esmp.git",
+  "bin": {
+    "etscGo": "bin/etsc"
+  },
+  "license": "MIT"
+}
