@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "bin": {
-    "esmp": "./bin/esmp.js"
+    "esmp": "./src/bin/esmp.js"
   },
   "files": [
     "dist"
@@ -21,8 +21,8 @@
     "node": ">=12"
   },
   "scripts": {
-    "compile:watch": "etsc -w",
-    "compile": "etsc",
+    "compile:watch": "tsc -w",
+    "compile": "tsc",
     "esbuild": "esbuild"
   },
   "dependencies": {

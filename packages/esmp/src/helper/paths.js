@@ -1,0 +1,22 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.cliPath = exports.staticPath = exports.outputPath = exports.template = exports.favicon = exports.cwdroot = void 0;
+var path_1 = __importDefault(require("path"));
+var fs_extra_1 = __importDefault(require("fs-extra"));
+var cwdroot = process.cwd();
+exports.cwdroot = cwdroot;
+var outputPath = path_1.default.join(cwdroot, 'dist');
+exports.outputPath = outputPath;
+var staticPath = path_1.default.join(cwdroot, 'public');
+exports.staticPath = staticPath;
+var favicon = path_1.default.join(staticPath, 'favicon.ico');
+exports.favicon = favicon;
+var template = path_1.default.join(staticPath, 'index.html');
+exports.template = template;
+var cliPath = path_1.default.join(__dirname, '../../');
+exports.cliPath = cliPath;
+exports.favicon = favicon = fs_extra_1.default.existsSync(favicon) ? favicon : path_1.default.join(__dirname, '../template/public/favicon.ico');
+exports.template = template = fs_extra_1.default.existsSync(template) ? template : path_1.default.join(__dirname, '../template/public/index.html');
