@@ -3,11 +3,8 @@
     "extends": "@efox/emp-tsconfig",
     "compilerOptions": {
       "baseUrl": ".",
-      "paths": {
-        "*": ["pkg/*"]
-      }
     },
     "include": [
-      "src","pkg"
+      "src","types"
     ]
   }

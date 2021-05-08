@@ -4,7 +4,7 @@ import './app.scss'
 import d from './app.json'
 console.log(d)
 confetti()
-setInterval(() => confetti(), 5000)
+// setInterval(() => confetti(), 5000)
 export default function App() {
   return (
     <div className="app">
